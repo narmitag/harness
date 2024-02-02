@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_narmitag_harness_1706862279796
+  name: Build harness
+  orgIdentifier: default
+  projectIdentifier: default_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1706862265138
+        repoName: narmitag/harness
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Arm64
+            os: MacOS
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
