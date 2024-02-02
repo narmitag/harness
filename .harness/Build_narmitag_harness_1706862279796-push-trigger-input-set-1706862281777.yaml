@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_narmitag_harness_1706862279796-push-trigger-input-set
+  identifier: Build_narmitag_harness_1706862279796pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_narmitag_harness_1706862279796
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
